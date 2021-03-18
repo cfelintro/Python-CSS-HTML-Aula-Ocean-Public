@@ -1,10 +1,13 @@
 <!-- Comentario -->
+{% extends "base.html" %}
 
-<html>
-    <head>
-
-    </head>>
-    <body>
-        <h1>Hello World</h1>
-    </body>>
-</html>
+{% block content %}
+<h1>Hello, {{ user.username }}!</h1>
+    <div>
+        {% for post in posts %}
+            <p>{{ post.autor.username }} says: <b>{{ post.body }}</b></p>
+        {% else %}
+             <p><b>There are no posts available</b></p>          
+        {% endfor %}
+    </div>
+{% endblock %}
