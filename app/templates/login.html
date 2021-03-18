@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>SignIn</h1>
+<form method='POST' action=''> <!-- action vazio envia os dados para a mesma URL da pagina -->
+<p>
+    <label for='username'>Username: </label>
+    <input name='user' id='username' type='text'>
+</p>
+<p>
+    <label for='password'>Password: </label>
+    <input name='pass' id='password' type='password'>
+</p>
+<p>
+    <input name='remember' type='checkbox' id='remember'>
+    <label for='remember'>Remember-me</label>
+</p>
+<button>Sign In</button> <!-- Botão tem como função padrão enviar dados a não ser que seja atribuida outra função -->
+</form>
+{% endblock %}
